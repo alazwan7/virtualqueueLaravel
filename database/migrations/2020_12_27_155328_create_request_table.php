@@ -18,6 +18,7 @@ class CreateRequestTable extends Migration
             $table->string('age');
             $table->string('ability');
             $table->string('currentLocation');
+            $table->string('distance');
             $table->timestamps();
             $table->foreignId('user_id');
         });
