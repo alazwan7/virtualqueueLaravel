@@ -18,11 +18,6 @@ class User extends Authenticatable
     use Notifiable;
     use TwoFactorAuthenticatable;
 
-    public function request()
-    {
-        return $this->hasMany(Request::class);
-    }
-
     /**
      * The attributes that are mass assignable.
      *

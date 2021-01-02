@@ -26,4 +26,6 @@ Route::get('/users/{id}', "App\Http\Controllers\userController@show");
 Route::post('/users', "App\Http\Controllers\userController@store");
 Route::put('/users/{id}', "App\Http\Controllers\userController@update");
 Route::post('/login', "App\Http\Controllers\userController@authenticate");
+
+Route::post('/requests', "App\Http\Controllers\RequestsController@store");
 // Route::get('/login', "App\Http\Controllers\userController@authenticate");

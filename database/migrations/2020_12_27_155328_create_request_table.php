@@ -13,14 +13,14 @@ class CreateRequestTable extends Migration
      */
     public function up()
     {
-        Schema::create('request', function (Blueprint $table) {
+        Schema::create('requests', function (Blueprint $table) {
             $table->id();
-            $table->string('age');
-            $table->string('ability');
-            $table->string('currentLocation');
-            $table->string('distance');
+            $table->string('senior_citizen')->nullable();
+            $table->string('disable')->nullable();
+            $table->string('currentLocation')->nullable();
+            $table->string('distance')->nullable();
             $table->timestamps();
-            $table->foreignId('user_id');
+            $table->foreignId('user_id')->nullable();
         });
     }
 
