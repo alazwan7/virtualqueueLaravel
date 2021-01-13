@@ -115,7 +115,10 @@ class UserController extends Controller
 
          $user->save();
 
-         return $user;
+        //  return $user;
+         return response()->json([
+            'message' => 'Project data update successfully'
+        ]);
     }
 
     /**
