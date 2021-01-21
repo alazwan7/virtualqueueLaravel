@@ -4,6 +4,7 @@
 namespace App\Http\Controllers;
 use App\Models\Counters;
 use Illuminate\Http\Request;
+use SebastianBergmann\LinesOfCode\Counter;
 
 class CountersController extends Controller
 {
@@ -23,4 +24,14 @@ class CountersController extends Controller
         $Counter->save();
         return($Counter);
     }
+
+    public function index()
+    {
+        $Counter = Counters::all();
+
+        return view('Counter.index', compact('Counter'));
+
+        //
+    }
+
 }

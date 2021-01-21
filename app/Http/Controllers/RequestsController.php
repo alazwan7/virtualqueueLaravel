@@ -8,6 +8,17 @@ use Illuminate\Http\Request;
 class RequestsController extends Controller
 {
     //
+    public function userRequest()
+    {
+        // return Requests::where('user_id', $id)
+        // ->count();
+        $Requests = Requests::all();
+
+        return $Requests;
+
+    }
+
+
     public function store(Request $request)
     {
 

@@ -29,4 +29,6 @@ Route::post('/login', "App\Http\Controllers\userController@authenticate");
 
 Route::post('/requests', "App\Http\Controllers\RequestsController@store");
 Route::post('/counters', "App\Http\Controllers\CountersController@store");
+Route::get('/counters', "App\Http\Controllers\userController@index");
+Route::get('/requests', "App\Http\Controllers\RequestsController@userRequest");
 // Route::get('/login', "App\Http\Controllers\userController@authenticate");
